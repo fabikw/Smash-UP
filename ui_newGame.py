@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'newGame.ui'
 #
-# Created: Tue Jun 23 13:40:50 2015
+# Created: Thu Jun 25 14:55:38 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -166,6 +166,19 @@ class Ui_newGame(object):
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), newGame.accept)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("rejected()")), newGame.reject)
         QtCore.QMetaObject.connectSlotsByName(newGame)
+        newGame.setTabOrder(self.player1, self.player1faction1)
+        newGame.setTabOrder(self.player1faction1, self.player1faction2)
+        newGame.setTabOrder(self.player1faction2, self.player2)
+        newGame.setTabOrder(self.player2, self.player2faction1)
+        newGame.setTabOrder(self.player2faction1, self.player2faction2)
+        newGame.setTabOrder(self.player2faction2, self.player3)
+        newGame.setTabOrder(self.player3, self.player3faction1)
+        newGame.setTabOrder(self.player3faction1, self.player3faction2)
+        newGame.setTabOrder(self.player3faction2, self.player4)
+        newGame.setTabOrder(self.player4, self.player4faction1)
+        newGame.setTabOrder(self.player4faction1, self.player4faction2)
+        newGame.setTabOrder(self.player4faction2, self.game)
+        newGame.setTabOrder(self.game, self.buttonBox)
 
     def retranslateUi(self, newGame):
         newGame.setWindowTitle(_translate("newGame", "New Game", None))
