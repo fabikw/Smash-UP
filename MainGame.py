@@ -19,6 +19,20 @@ class BaseListItem(QtGui.QListWidgetItem):
         QtGui.QListWidgetItem.__init__(self, base.name)
         self.base = base
 
+def newSetText(self,text):
+    self.text = text
+    t = text.replace("[b]","<b>")
+    t = t.replace("[u]","<u>")
+    t = t.replace("[/b]","</b>")
+    t = t.replace("[/u]","</u>")
+    t = t.replace("\n","<br>")
+    self.setHtml(t)
+        
+def newMimeData(self):
+    q = QtCore.QMimeData()
+    q.setText(self.text)
+    return q
+
 class MainGame(QtGui.QDialog, Ui_mainGame):
     '''
     classdocs
@@ -34,6 +48,10 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.state = gameState
         self.undo.setEnabled(False)
         self.redo.setEnabled(False)
+        
+        import types
+        self.output.setText = types.MethodType(newSetText,self.output)
+        self.output.createMimeDataFromSelection = types.MethodType(newMimeData,self.output)
         self.output.setText(self.state.currentState.printFinal())
 
         self.allBases.addItems(self.state.currentState.available_bases)
