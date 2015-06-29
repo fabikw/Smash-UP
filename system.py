@@ -33,6 +33,7 @@ class Base(object):
         self.players_points_comments = []
         self.order = 0
         self.destroyed = False
+        self.destroyed_with = None
         self.terraformed = False
         self.terraformed_into = None
 
@@ -41,8 +42,9 @@ class Base(object):
         self.players_points_comments = list(zip(players, points, comments))
         self.order = order
 
-    def destroy(self):
+    def destroy(self, dest):
         self.destroyed = True
+        self.destroyed_with = dest
 
     def terraform(self, other):
         self.terraformed = True
@@ -53,7 +55,7 @@ class Base(object):
 
     def printFinal(self):
         if self.destroyed:
-            return '  - {} (destroyed with [b]Burn it Down[/b])'.format(self.name)
+            return '  - {} (destroyed with [b]{}[/b])'.format(self.name, self.destroyed_with)
         elif self.terraformed:
             return '  - {} (terraformed into {})'.format(self.name, self.terraformed_into)
         elif not self.scored:
@@ -87,8 +89,8 @@ class Game(object):
         self.players.append(player)
         self.sets.update(player.sets)
 
-    def destroyBase(self, base):
-        base.destroy()
+    def destroyBase(self, base, dest):
+        base.destroy(dest)
         self.available_bases.append(base.name)
         self.available_bases.sort()
 

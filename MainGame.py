@@ -10,6 +10,7 @@ from copy import deepcopy
 from endGame import EndGame
 from scoreBase import ScoreBase
 from system import *
+import data
 from ui_mainGame import Ui_mainGame
 
 
@@ -19,15 +20,15 @@ class BaseListItem(QtGui.QListWidgetItem):
         QtGui.QListWidgetItem.__init__(self, base.name)
         self.base = base
 
-def newSetText(self,text):
+def newSetText(self, text):
     self.text = text
-    t = text.replace("[b]","<b>")
-    t = t.replace("[u]","<u>")
-    t = t.replace("[/b]","</b>")
-    t = t.replace("[/u]","</u>")
-    t = t.replace("\n","<br>")
+    t = text.replace("[b]", "<b>")
+    t = t.replace("[u]", "<u>")
+    t = t.replace("[/b]", "</b>")
+    t = t.replace("[/u]", "</u>")
+    t = t.replace("\n", "<br>")
     self.setHtml(t)
-        
+
 def newMimeData(self):
     q = QtCore.QMimeData()
     q.setText(self.text)
@@ -48,10 +49,10 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.state = gameState
         self.undo.setEnabled(False)
         self.redo.setEnabled(False)
-        
+
         import types
-        self.output.setText = types.MethodType(newSetText,self.output)
-        self.output.createMimeDataFromSelection = types.MethodType(newMimeData,self.output)
+        self.output.setText = types.MethodType(newSetText, self.output)
+        self.output.createMimeDataFromSelection = types.MethodType(newMimeData, self.output)
         self.output.setText(self.state.currentState.printFinal())
 
         self.allBases.addItems(self.state.currentState.available_bases)
@@ -96,7 +97,9 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
     def updateKeyCards(self):
         game = deepcopy(self.state.currentState)
         text = self.keyCards.toPlainText().strip()
-        while '\n\n' in text: text = text.replace('\n\n', '\n')
+        import re
+        text = re.sub("\n+", "\n", text)
+        text = re.sub("[*](.*?)[*]", r"[b]\1[/b]", text)
         game.key_cards = text.splitlines()
         self.state.newState(game)
         self.undo.setEnabled(True)
@@ -121,7 +124,10 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         game = deepcopy(self.state.currentState)
         name = self.playingBases.currentItem().base.name
         b = next(x for x in reversed(game.played_bases) if x.name == name)
-        game.destroyBase(b)
+        dest = QtGui.QInputDialog.getItem(self, "Select action", "Card:", data.destroying_actions, editable = False)
+        if not dest[1]:
+            return
+        game.destroyBase(b, dest[0])
         self.state.newState(game)
         self.undo.setEnabled(True)
         self.redo.setEnabled(False)

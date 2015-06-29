@@ -20,6 +20,8 @@ class Expansion(Enum):
 
 # This module contains data to populate forms and lists.
 
+destroying_actions = ["Burn it Down", "Not in Kansas"]
+
 # FACTIONS is a dictionary where the keys are the factions' names, and the value is a tuple with the first and second word for the names as well as the expansion set.
 FACTIONS = {'Aliens': ('Alien', 'Aliens', Expansion.base),
             'Dinosaurs': ('Dinosaur', 'Dinosaurs', Expansion.base),
@@ -56,7 +58,7 @@ FACTIONS = {'Aliens': ('Alien', 'Aliens', Expansion.base),
             'Mythic Horses': ('Mythic Horse', 'Mythic Horses', Expansion.PPSU),
             'Kitty Cats': ('Kitty Cat', 'Kitty Cats', Expansion.PPSU),
             'Princesses': ('Princess', 'Princesses', Expansion.PPSU),
-            
+
             'Clerics': ('Cleric', 'Clerics', Expansion.M),
             'Dwarves': ('Dwarf', 'Dwarves', Expansion.M),
             'Elves': ('Elf', 'Elves', Expansion.M),
@@ -69,7 +71,7 @@ FACTIONS = {'Aliens': ('Alien', 'Aliens', Expansion.base),
             'Sharks': ('Shark', 'Sharks', Expansion.PT),
             'Superheroes': ('Superhero', 'Superheroes', Expansion.PT),
             'Tornadoes': ('Tornado', 'Tornadoes', Expansion.PT),
-            'Greek Myths': ('Greek', 'Greeks', Expansion.PT),
+            'Mythic Greeks': ('Mythic Greek', 'Mythic Greeks', Expansion.PT),
             'Dragons': ('Dragon', 'Dragons', Expansion.PT)}
 
 # BASES is a dictionary where the keys are the bases' names, and the value is a tuple with the point awards and the expansion
@@ -137,23 +139,23 @@ BASES = {'The Homeworld': (4, 2, 1, Expansion.base),
          'Pony Land': (3, 2, 1, Expansion.PPSU),
          'Beautiful Castle': (4, 2, 1, Expansion.PPSU),
          'Ice Castle': (3, 2, 2, Expansion.PPSU),
-         
-         'The Coffers': (4,2,1, Expansion.M),
-         "Thieves' Guild": (4,3,2, Expansion.M),
-         'Bastion': (3,2,2, Expansion.M),
-         'The Gauntlet': (5,3,2, Expansion.M),
-         'Hotel of Holiness': (4,3,2, Expansion.M),
-         'Whack-A-Ghoul': (3,2,1, Expansion.M),
-         'Dimension Doors': (4,2,1, Expansion.M),
-         "Mage's Tower": (4,3,2, Expansion.M),
-         'Treehouse': (4,2,1, Expansion.M),
-         "Helper's Hollow": (3,2,1, Expansion.M),
-         "The Mines": (4,2,1, Expansion.M),
-         'Treasure Bath': (2,0,0, Expansion.M),
-         'The Pits': (4,2,1, Expansion.M),
-         'Garrison': (3,2,1, Expansion.M),
-         'Birthday Party': (4,2,1, Expansion.M),
-         'Subterranean Lair': (5,3,2, Expansion.M),
+
+         'The Coffers': (4, 2, 1, Expansion.M),
+         "Thieves' Guild": (4, 3, 2, Expansion.M),
+         'Bastion': (3, 2, 2, Expansion.M),
+         'The Gauntlet': (5, 3, 2, Expansion.M),
+         'Hotel of Holiness': (4, 3, 2, Expansion.M),
+         'Whack-A-Ghoul': (3, 2, 1, Expansion.M),
+         'Dimension Doors': (4, 2, 1, Expansion.M),
+         "Mage's Tower": (4, 3, 2, Expansion.M),
+         'Treehouse': (4, 2, 1, Expansion.M),
+         "Helper's Hollow": (3, 2, 1, Expansion.M),
+         "The Mines": (4, 2, 1, Expansion.M),
+         'Treasure Bath': (2, 0, 0, Expansion.M),
+         'The Pits': (4, 2, 1, Expansion.M),
+         'Garrison': (3, 2, 1, Expansion.M),
+         'Birthday Party': (4, 2, 1, Expansion.M),
+         'Subterranean Lair': (5, 3, 2, Expansion.M),
 
          'Shark Reef': (4, 2, 1, Expansion.PT),
          'The Deep': (3, 3, 2, Expansion.PT),
