@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'newGame.ui'
 #
-# Created: Thu Jun 25 14:55:38 2015
+# Created: Mon Jun 29 12:38:16 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,12 +27,12 @@ class Ui_newGame(object):
     def setupUi(self, newGame):
         newGame.setObjectName(_fromUtf8("newGame"))
         newGame.resize(607, 173)
-        self.verticalLayout = QtGui.QVBoxLayout(newGame)
-        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.gridLayout_2 = QtGui.QGridLayout(newGame)
+        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
         self.gridLayout = QtGui.QGridLayout()
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.player4name = QtGui.QLabel(newGame)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.player4name.sizePolicy().hasHeightForWidth())
@@ -63,7 +63,7 @@ class Ui_newGame(object):
         self.label_4.setObjectName(_fromUtf8("label_4"))
         self.gridLayout.addWidget(self.label_4, 1, 0, 1, 1)
         self.player1name = QtGui.QLabel(newGame)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.player1name.sizePolicy().hasHeightForWidth())
@@ -76,7 +76,7 @@ class Ui_newGame(object):
         self.label_12.setObjectName(_fromUtf8("label_12"))
         self.gridLayout.addWidget(self.label_12, 3, 4, 1, 1)
         self.player3name = QtGui.QLabel(newGame)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.player3name.sizePolicy().hasHeightForWidth())
@@ -95,7 +95,7 @@ class Ui_newGame(object):
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.gridLayout.addWidget(self.label_2, 0, 2, 1, 1)
         self.player2name = QtGui.QLabel(newGame)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.player2name.sizePolicy().hasHeightForWidth())
@@ -143,7 +143,7 @@ class Ui_newGame(object):
         self.player4 = QtGui.QLineEdit(newGame)
         self.player4.setObjectName(_fromUtf8("player4"))
         self.gridLayout.addWidget(self.player4, 3, 1, 1, 1)
-        self.verticalLayout.addLayout(self.gridLayout)
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.label_13 = QtGui.QLabel(newGame)
@@ -160,7 +160,7 @@ class Ui_newGame(object):
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName(_fromUtf8("buttonBox"))
         self.horizontalLayout.addWidget(self.buttonBox)
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.gridLayout_2.addLayout(self.horizontalLayout, 1, 0, 1, 1)
 
         self.retranslateUi(newGame)
         QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL(_fromUtf8("accepted()")), newGame.accept)
