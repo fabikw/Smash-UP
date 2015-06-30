@@ -34,3 +34,7 @@ if __name__ == '__main__':
         game.generateBasesList()
         mainGame = MainGame(state)
         mainGame.exec_()
+    elif res == 2:
+        state = newGame.values()
+        mainGame = MainGame(state)
+        mainGame.exec_()

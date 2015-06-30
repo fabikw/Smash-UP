@@ -61,6 +61,8 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         (self.specificCards.append(x) for x in self.state.currentState.specific_cards)
 
         self.allBases.addItems(self.state.currentState.available_bases)
+        for b in self.state.currentState.played_bases:
+            if not b.scored and not b.destroyed and not b.terraformed: self.playingBases.addItem(BaseListItem(b))
         self.allBases.currentItemChanged.connect(self.enableNewBase)
         self.playingBases.currentItemChanged.connect(self.enableScoreBase)
         self.newBase.clicked.connect(self.addBase)
@@ -80,6 +82,8 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.playingBases.setCurrentRow(-1)
         self.enableNewBase()
         self.enableScoreBase()
+        if self.state.pastStates: self.undo.setEnabled(True)
+        if self.state.futureStates:self.redo.setEnabled(True)
 
     def terra(self):
         game = deepcopy(self.state.currentState)
@@ -197,6 +201,10 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.playingBases.setCurrentRow(-1)
         with open('./smash_up.backup.txt','w') as f:
             f.write(game.printFinal())
+        import pickle
+        with open('./smash_up.game','wb') as f:
+            pickle.dump(self.state,f)
+            
 
 
 def test():
