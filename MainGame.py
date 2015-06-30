@@ -56,6 +56,9 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.output.setText = types.MethodType(newSetText, self.output)
         self.output.createMimeDataFromSelection = types.MethodType(newMimeData, self.output)
         self.output.setText(self.state.currentState.printFinal())
+        
+        (self.keyCards.append(x) for x in self.state.currentState.key_cards)
+        (self.specificCards.append(x) for x in self.state.currentState.specific_cards)
 
         self.allBases.addItems(self.state.currentState.available_bases)
         self.allBases.currentItemChanged.connect(self.enableNewBase)
@@ -192,6 +195,8 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         for b in game.played_bases:
             if not b.scored and not b.destroyed and not b.terraformed: self.playingBases.addItem(BaseListItem(b))
         self.playingBases.setCurrentRow(-1)
+        with open('./smash_up.backup.txt','w') as f:
+            f.write(game.printFinal())
 
 
 def test():
