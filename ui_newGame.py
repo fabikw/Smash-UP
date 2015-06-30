@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'newGame.ui'
 #
-# Created: Mon Jun 29 15:08:15 2015
+# Created: Tue Jun 30 12:16:36 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -242,6 +242,11 @@ class Ui_newGame(object):
         self.horizontalLayout.addWidget(self.game)
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
+        self.loadGame = QtGui.QPushButton(newGame)
+        self.loadGame.setObjectName(_fromUtf8("loadGame"))
+        self.horizontalLayout.addWidget(self.loadGame)
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem1)
         self.buttonBox = QtGui.QDialogButtonBox(newGame)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -285,6 +290,7 @@ class Ui_newGame(object):
         self.label_9.setText(_translate("newGame", "Faction 2", None))
         self.label_10.setText(_translate("newGame", "Player 4 Name", None))
         self.label_13.setText(_translate("newGame", "Game Number", None))
+        self.loadGame.setText(_translate("newGame", "Load Game", None))
 
 
 if __name__ == "__main__":

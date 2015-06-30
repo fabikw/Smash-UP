@@ -197,6 +197,10 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.playingBases.setCurrentRow(-1)
         with open('./smash_up.backup.txt','w') as f:
             f.write(game.printFinal())
+        import pickle
+        with open('./smash_up.game','wb') as f:
+            pickle.dump(self.state,f)
+            
 
 
 def test():

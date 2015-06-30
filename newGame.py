@@ -6,7 +6,7 @@ Created on Jun 22, 2015
 
 from PyQt4 import QtGui,QtCore
 from data import FACTIONS
-from system import Game, Player
+from system import Game, Player, GameStates, Base
 from ui_newGame import Ui_newGame
 
 class NewGame(QtGui.QDialog,Ui_newGame):
@@ -44,6 +44,7 @@ class NewGame(QtGui.QDialog,Ui_newGame):
         self.player3faction2.currentIndexChanged.connect(self.player3Change)
         self.player4faction1.currentIndexChanged.connect(self.player4Change)
         self.player4faction2.currentIndexChanged.connect(self.player4Change)
+        self.loadGame.clicked.connect(self.load)
         
         self.player1Change()
         self.player2Change()
@@ -57,8 +58,27 @@ class NewGame(QtGui.QDialog,Ui_newGame):
 #         
 #         self.buttonBox.
     
+    def load(self):
+        load_file = QtGui.QFileDialog.getOpenFileName(parent=self, caption='Open file', directory='.')
+        if load_file:
+            import pickle
+            try:
+                f = open(load_file,'rb')
+                game_state = pickle.load(f)
+                assert(isinstance(game_state, GameStates))
+                import types
+                self.validate = types.MethodType(lambda x: True, self)
+                self.values = types.MethodType(lambda x: game_state,self)
+                self.done(2)
+            except Exception as e:
+                print(e)
+                QtGui.QMessageBox.critical(self,"Error","The file could not be loaded")
+            finally:
+                f.close()
+            
+        
+    
     def accept(self):
-         
         if self.validate():
             QtGui.QDialog.accept(self)
     
