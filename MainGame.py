@@ -4,13 +4,14 @@ Created on Jun 23, 2015
 @author: fabian
 '''
 
-from PyQt4 import QtGui, QtCore
 from copy import deepcopy
 
+from PyQt4 import QtGui, QtCore
+
+import data
 from endGame import EndGame
 from scoreBase import ScoreBase
-from system import *
-import data
+from system import Player, Game, GameStates
 from ui_mainGame import Ui_mainGame
 
 
@@ -46,6 +47,7 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         '''
         QtGui.QDialog.__init__(self)
         self.setupUi(self)
+        self.setWindowFlags(QtCore.Qt.WindowMinMaxButtonsHint | QtCore.Qt.WindowCloseButtonHint)
         self.state = gameState
         self.undo.setEnabled(False)
         self.redo.setEnabled(False)
@@ -56,7 +58,6 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.output.setText(self.state.currentState.printFinal())
 
         self.allBases.addItems(self.state.currentState.available_bases)
-
         self.allBases.currentItemChanged.connect(self.enableNewBase)
         self.playingBases.currentItemChanged.connect(self.enableScoreBase)
         self.newBase.clicked.connect(self.addBase)
@@ -72,7 +73,6 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.scoreBase.setEnabled(False)
         self.terraform.setEnabled(False)
         self.destroy.setEnabled(False)
-
         self.allBases.setCurrentRow(-1)
         self.playingBases.setCurrentRow(-1)
         self.enableNewBase()

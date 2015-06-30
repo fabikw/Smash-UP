@@ -4,14 +4,17 @@ Created on Jun 23, 2015
 @author: fabian
 '''
 
-from PyQt4 import QtGui, QtCore
+from PyQt4 import QtGui
 
 from MainGame import MainGame
 from newGame import NewGame
 from system import GameStates, Game
 
+
 stylesheet = """
 QDialog{background-color: rgb(227, 184, 241)}
+QInputDialog QLabel{font-size: 12pt}
+QInputDialog QComboBox{font-size: 12pt}
 """
 
 

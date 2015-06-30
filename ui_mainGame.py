@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainGame.ui'
 #
-# Created: Mon Jun 29 12:22:28 2015
+# Created: Mon Jun 29 15:08:44 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_mainGame(object):
     def setupUi(self, mainGame):
         mainGame.setObjectName(_fromUtf8("mainGame"))
-        mainGame.resize(823, 812)
+        mainGame.resize(839, 812)
         self.gridLayout = QtGui.QGridLayout(mainGame)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.splitter_2 = QtGui.QSplitter(mainGame)
@@ -59,6 +59,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.newBase.sizePolicy().hasHeightForWidth())
         self.newBase.setSizePolicy(sizePolicy)
         self.newBase.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.newBase.setFont(font)
         self.newBase.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.newBase.setAutoDefault(False)
         self.newBase.setObjectName(_fromUtf8("newBase"))
@@ -103,6 +106,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.terraform.sizePolicy().hasHeightForWidth())
         self.terraform.setSizePolicy(sizePolicy)
         self.terraform.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.terraform.setFont(font)
         self.terraform.setAutoDefault(False)
         self.terraform.setObjectName(_fromUtf8("terraform"))
         self.verticalLayout_2.addWidget(self.terraform)
@@ -113,6 +119,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.scoreBase.sizePolicy().hasHeightForWidth())
         self.scoreBase.setSizePolicy(sizePolicy)
         self.scoreBase.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.scoreBase.setFont(font)
         self.scoreBase.setAutoDefault(False)
         self.scoreBase.setObjectName(_fromUtf8("scoreBase"))
         self.verticalLayout_2.addWidget(self.scoreBase)
@@ -123,6 +132,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.destroy.sizePolicy().hasHeightForWidth())
         self.destroy.setSizePolicy(sizePolicy)
         self.destroy.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.destroy.setFont(font)
         self.destroy.setAutoDefault(False)
         self.destroy.setObjectName(_fromUtf8("destroy"))
         self.verticalLayout_2.addWidget(self.destroy)
@@ -139,6 +151,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.undo.sizePolicy().hasHeightForWidth())
         self.undo.setSizePolicy(sizePolicy)
         self.undo.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.undo.setFont(font)
         self.undo.setObjectName(_fromUtf8("undo"))
         self.verticalLayout.addWidget(self.undo)
         self.redo = QtGui.QPushButton(self.layoutWidget)
@@ -148,6 +163,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.redo.sizePolicy().hasHeightForWidth())
         self.redo.setSizePolicy(sizePolicy)
         self.redo.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.redo.setFont(font)
         self.redo.setObjectName(_fromUtf8("redo"))
         self.verticalLayout.addWidget(self.redo)
         self.horizontalLayout_3.addLayout(self.verticalLayout)
@@ -160,6 +178,9 @@ class Ui_mainGame(object):
         sizePolicy.setHeightForWidth(self.finish.sizePolicy().hasHeightForWidth())
         self.finish.setSizePolicy(sizePolicy)
         self.finish.setMinimumSize(QtCore.QSize(101, 0))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.finish.setFont(font)
         self.finish.setAutoDefault(False)
         self.finish.setObjectName(_fromUtf8("finish"))
         self.horizontalLayout_3.addWidget(self.finish)
@@ -184,6 +205,9 @@ class Ui_mainGame(object):
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_4.addItem(spacerItem1)
         self.updateCards = QtGui.QPushButton(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.updateCards.setFont(font)
         self.updateCards.setObjectName(_fromUtf8("updateCards"))
         self.horizontalLayout_4.addWidget(self.updateCards)
         self.verticalLayout_4.addLayout(self.horizontalLayout_4)

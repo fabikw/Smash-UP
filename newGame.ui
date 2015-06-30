@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>607</width>
-    <height>173</height>
+    <width>696</width>
+    <height>181</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <item row="3" column="6">
       <widget class="QLabel" name="player4name">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -29,6 +29,11 @@
          <width>150</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string/>
@@ -37,36 +42,74 @@
      </item>
      <item row="2" column="2">
       <widget class="QLabel" name="label_8">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 1</string>
        </property>
       </widget>
      </item>
      <item row="0" column="5">
-      <widget class="QComboBox" name="player1faction2"/>
+      <widget class="QComboBox" name="player1faction2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Player 1 Name</string>
        </property>
       </widget>
      </item>
      <item row="3" column="5">
-      <widget class="QComboBox" name="player4faction2"/>
+      <widget class="QComboBox" name="player4faction2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="3" column="2">
       <widget class="QLabel" name="label_11">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 1</string>
        </property>
       </widget>
      </item>
      <item row="3" column="3">
-      <widget class="QComboBox" name="player4faction1"/>
+      <widget class="QComboBox" name="player4faction1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Player 2 Name</string>
        </property>
@@ -75,7 +118,7 @@
      <item row="0" column="6">
       <widget class="QLabel" name="player1name">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -85,6 +128,11 @@
          <width>150</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string/>
@@ -93,6 +141,11 @@
      </item>
      <item row="3" column="4">
       <widget class="QLabel" name="label_12">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 2</string>
        </property>
@@ -101,7 +154,7 @@
      <item row="2" column="6">
       <widget class="QLabel" name="player3name">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -111,6 +164,11 @@
          <width>150</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string/>
@@ -119,16 +177,32 @@
      </item>
      <item row="0" column="4">
       <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 2</string>
        </property>
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QComboBox" name="player2faction1"/>
+      <widget class="QComboBox" name="player2faction1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="0" column="2">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 1</string>
        </property>
@@ -137,7 +211,7 @@
      <item row="1" column="6">
       <widget class="QLabel" name="player2name">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -148,6 +222,11 @@
          <height>0</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -155,6 +234,11 @@
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 2</string>
        </property>
@@ -162,6 +246,11 @@
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Player 3 Name</string>
        </property>
@@ -169,48 +258,111 @@
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 1</string>
        </property>
       </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QComboBox" name="player3faction2"/>
+      <widget class="QComboBox" name="player3faction2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="2" column="4">
       <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Faction 2</string>
        </property>
       </widget>
      </item>
      <item row="0" column="3">
-      <widget class="QComboBox" name="player1faction1"/>
+      <widget class="QComboBox" name="player1faction1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="2" column="3">
-      <widget class="QComboBox" name="player3faction1"/>
+      <widget class="QComboBox" name="player3faction1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_10">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Player 4 Name</string>
        </property>
       </widget>
      </item>
      <item row="1" column="5">
-      <widget class="QComboBox" name="player2faction2"/>
+      <widget class="QComboBox" name="player2faction2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="player1"/>
+      <widget class="QLineEdit" name="player1">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="player2"/>
+      <widget class="QLineEdit" name="player2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="player3"/>
+      <widget class="QLineEdit" name="player3">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="player4"/>
+      <widget class="QLineEdit" name="player4">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -218,6 +370,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label_13">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Game Number</string>
        </property>
@@ -245,6 +402,11 @@
      </item>
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>

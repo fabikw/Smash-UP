@@ -4,10 +4,11 @@ Created on Jun 22, 2015
 @author: fabian
 '''
 
-from PyQt4 import QtGui, QtCore
-from ui_scoreBase import Ui_scoreBase
+from PyQt4 import QtGui
+
 from data import BASES
 from system import Player, Base
+from ui_scoreBase import Ui_scoreBase
 
 
 class ScoreBase(QtGui.QDialog, Ui_scoreBase):
