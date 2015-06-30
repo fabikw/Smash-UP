@@ -84,6 +84,7 @@ class Game(object):
         self.scoredBases = 0
         self.finished = False
         self.key_cards = []
+        self.specific_cards = []
 
     def addPlayer(self, player):
         self.players.append(player)
@@ -131,6 +132,8 @@ class Game(object):
         s = s + '\n'.join(map(Base.printFinal, self.played_bases))
         s = s + '\n\n[u]Key Cards[/u]\n'
         s = s + '\n'.join(map(lambda x: '  - ' + x, self.key_cards))
+        s = s + '\n\n[u]Specific Card Commentary[/u]\n'
+        s = s + '\n'.join(map(lambda x: '  - ' + x, self.specific_cards))
         return s
 
 class GameStates(object):
