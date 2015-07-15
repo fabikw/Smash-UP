@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainGame.ui'
 #
-# Created: Tue Jun 30 12:03:29 2015
+# Created: Wed Jul 15 15:29:36 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_mainGame(object):
     def setupUi(self, mainGame):
         mainGame.setObjectName(_fromUtf8("mainGame"))
-        mainGame.resize(1005, 697)
+        mainGame.resize(1005, 708)
         self.gridLayout_4 = QtGui.QGridLayout(mainGame)
         self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
         self.splitter_2 = QtGui.QSplitter(mainGame)
@@ -68,6 +68,7 @@ class Ui_mainGame(object):
         font.setBold(False)
         font.setWeight(50)
         self.allBases.setFont(font)
+        self.allBases.setAlternatingRowColors(True)
         self.allBases.setObjectName(_fromUtf8("allBases"))
         self.gridLayout_3.addWidget(self.allBases, 0, 0, 1, 1)
         self.verticalLayout_3.addLayout(self.gridLayout_3)
@@ -85,6 +86,7 @@ class Ui_mainGame(object):
         font.setBold(False)
         font.setWeight(50)
         self.playingBases.setFont(font)
+        self.playingBases.setAlternatingRowColors(True)
         self.playingBases.setObjectName(_fromUtf8("playingBases"))
         self.gridLayout_2.addWidget(self.playingBases, 0, 0, 1, 1)
         self.verticalLayout_2 = QtGui.QVBoxLayout()
@@ -175,14 +177,14 @@ class Ui_mainGame(object):
         self.finish.setObjectName(_fromUtf8("finish"))
         self.horizontalLayout_3.addWidget(self.finish)
         self.verticalLayout_3.addLayout(self.horizontalLayout_3)
-        self.widget = QtGui.QWidget(self.splitter)
-        self.widget.setObjectName(_fromUtf8("widget"))
-        self.verticalLayout_4 = QtGui.QVBoxLayout(self.widget)
+        self.layoutWidget1 = QtGui.QWidget(self.splitter)
+        self.layoutWidget1.setObjectName(_fromUtf8("layoutWidget1"))
+        self.verticalLayout_4 = QtGui.QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_4.setMargin(0)
         self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.label = QtGui.QLabel(self.widget)
+        self.label = QtGui.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
         font.setPointSize(26)
         font.setBold(True)
@@ -193,7 +195,7 @@ class Ui_mainGame(object):
         self.horizontalLayout.addWidget(self.label)
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
-        self.updateCards = QtGui.QPushButton(self.widget)
+        self.updateCards = QtGui.QPushButton(self.layoutWidget1)
         font = QtGui.QFont()
         font.setPointSize(12)
         self.updateCards.setFont(font)
@@ -201,7 +203,7 @@ class Ui_mainGame(object):
         self.horizontalLayout.addWidget(self.updateCards)
         spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem2)
-        self.label_2 = QtGui.QLabel(self.widget)
+        self.label_2 = QtGui.QLabel(self.layoutWidget1)
         font = QtGui.QFont()
         font.setPointSize(26)
         font.setBold(True)
@@ -213,7 +215,7 @@ class Ui_mainGame(object):
         self.verticalLayout_4.addLayout(self.horizontalLayout)
         self.gridLayout = QtGui.QGridLayout()
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.keyCards = QtGui.QPlainTextEdit(self.widget)
+        self.keyCards = QtGui.QPlainTextEdit(self.layoutWidget1)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding, QtGui.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -227,7 +229,7 @@ class Ui_mainGame(object):
         self.keyCards.setFont(font)
         self.keyCards.setObjectName(_fromUtf8("keyCards"))
         self.gridLayout.addWidget(self.keyCards, 0, 0, 1, 1)
-        self.specificCards = QtGui.QPlainTextEdit(self.widget)
+        self.specificCards = QtGui.QPlainTextEdit(self.layoutWidget1)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.MinimumExpanding, QtGui.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)

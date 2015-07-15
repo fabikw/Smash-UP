@@ -49,6 +49,8 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.setupUi(self)
         self.setWindowFlags(QtCore.Qt.WindowMinMaxButtonsHint | QtCore.Qt.WindowCloseButtonHint)
         self.state = gameState
+        self.raise_()
+        self.activateWindow()
         self.undo.setEnabled(False)
         self.redo.setEnabled(False)
 
@@ -56,7 +58,7 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         self.output.setText = types.MethodType(newSetText, self.output)
         self.output.createMimeDataFromSelection = types.MethodType(newMimeData, self.output)
         self.output.setText(self.state.currentState.printFinal())
-        
+
         (self.keyCards.append(x) for x in self.state.currentState.key_cards)
         (self.specificCards.append(x) for x in self.state.currentState.specific_cards)
 
@@ -199,12 +201,12 @@ class MainGame(QtGui.QDialog, Ui_mainGame):
         for b in game.played_bases:
             if not b.scored and not b.destroyed and not b.terraformed: self.playingBases.addItem(BaseListItem(b))
         self.playingBases.setCurrentRow(-1)
-        with open('./smash_up.backup.txt','w') as f:
+        with open('./smash_up.backup.txt', 'w') as f:
             f.write(game.printFinal())
         import pickle
-        with open('./smash_up.game','wb') as f:
-            pickle.dump(self.state,f)
-            
+        with open('./smash_up.game', 'wb') as f:
+            pickle.dump(self.state, f)
+
 
 
 def test():

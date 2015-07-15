@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1005</width>
-    <height>697</height>
+    <height>708</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,6 +78,9 @@
               <bold>false</bold>
              </font>
             </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -104,6 +107,9 @@
               <weight>50</weight>
               <bold>false</bold>
              </font>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -292,7 +298,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
